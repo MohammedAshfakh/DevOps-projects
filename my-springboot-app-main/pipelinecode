@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+    triggers {
+        githubPush()
+    }
+    tools {
+        maven 'Maven'
+        jdk 'Java8'
+    }
+    stages {
+        stage ('clone code') {
+            steps{
+                git branch: 'main', url:'https://github.com/MohammedAshfakh/my-springboot-app.git'
+            }
+        }
+        stage ('build') {
+            steps {
+                sh 'mvn clean package -DskipTests'
+            }
+        }
+        stage ('build Docker image') {
+            steps {
+                sh 'docker build -t myapp .'
+            }
+        }
+        stage ('Run container') {
+
+            steps {
+                sh 'docker rm -f myapp-container || true'
+                sh 'docker run -d --name myapp-container -p 1700:8090 myapp'
+            }
+
+        }
+    }
+}
