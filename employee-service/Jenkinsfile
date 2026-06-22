@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        maven 'Maven-3.9'
+    }
     environment {
         AWS_REGION = "us-east-1"
         ECR_URI = "799517508141.dkr.ecr.us-east-1.amazonaws.com/employee-api"
