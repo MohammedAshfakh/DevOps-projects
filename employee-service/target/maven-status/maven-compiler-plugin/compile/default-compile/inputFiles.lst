@@ -1,0 +1,5 @@
+/home/ubuntu/GitOps/DevOps-projects/employee-service/src/main/java/com/example/employee/EmployeeApplication.java
+/home/ubuntu/GitOps/DevOps-projects/employee-service/src/main/java/com/example/employee/controller/EmployeeController.java
+/home/ubuntu/GitOps/DevOps-projects/employee-service/src/main/java/com/example/employee/model/Employee.java
+/home/ubuntu/GitOps/DevOps-projects/employee-service/src/main/java/com/example/employee/repository/EmployeeRepository.java
+/home/ubuntu/GitOps/DevOps-projects/employee-service/src/main/java/com/example/employee/service/EmployeeService.java
