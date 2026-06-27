@@ -5,7 +5,7 @@ password=sonar
 database=sonardb
 network=sonarnet
 
-docker create network $network 2>/dev/null
+docker network create $network 2>/dev/null
 
 
 sleep 10
