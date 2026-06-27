@@ -8,7 +8,7 @@ network=sonarnet
 docker network create $network 2>/dev/null
 
 
-sleep 10
+sleep 5
 
 docker run -d \
 	--name postgres \
@@ -19,7 +19,7 @@ docker run -d \
 	-e POSTGRES_DB=$database \
 	postgres:15
 
-sleep 20
+sleep 5 
 
 docker run -d \
 	--name sonarqube \
